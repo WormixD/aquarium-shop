@@ -1,0 +1,16 @@
+body
+{
+	background-color:#462e79;
+	color:#FFF;
+}
+#baza
+{
+	background-color:#FFF;
+	color:#000;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:20px;
+	padding:10px;
+	width:600px;
+	text-align:center;
+}

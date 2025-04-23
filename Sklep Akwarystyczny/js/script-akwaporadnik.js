@@ -1,0 +1,66 @@
+// icons Facebook ...
+// OnlineWebFonts_Com({
+//   Id: ".fbIcon",
+//   Data: __Animations["56684"],
+// }).Play();
+
+//slide bar from message button
+$(document).ready(function () {
+  $("#message-form").click(function () {
+    $("#slideout").toggleClass("on");
+  });
+});
+//Time counting
+// Zadane czasy w sekundach
+
+var daysInSeconds = 6 * 24 * 60 * 60;
+var hoursInSeconds = 8 * 60 * 60;
+var minutesInSeconds = 31 * 60;
+var seconds = 51;
+
+var totalTimeInSeconds =
+  daysInSeconds + hoursInSeconds + minutesInSeconds + seconds;
+
+function formatTime(timeInSeconds) {
+  var days = Math.floor(timeInSeconds / (24 * 60 * 60));
+  var hours = Math.floor((timeInSeconds % (24 * 60 * 60)) / (60 * 60));
+  var minutes = Math.floor((timeInSeconds % (60 * 60)) / 60);
+  var remainingSeconds = timeInSeconds % 60;
+
+  return {
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: remainingSeconds,
+  };
+}
+
+function updateCountdown() {
+  var countdownParagraph = document.getElementById("countdown");
+
+  if (totalTimeInSeconds > 0) {
+    var formattedTime = formatTime(totalTimeInSeconds);
+    var countdownText = `Dni: ${formattedTime.days}, Godzin: ${formattedTime.hours}, Minut: ${formattedTime.minutes}, Sekund: ${formattedTime.seconds}`;
+    countdownParagraph.textContent = countdownText;
+
+    totalTimeInSeconds--;
+
+    // Zapisz aktualny czas do localStorage
+    localStorage.setItem("countdownTime", totalTimeInSeconds);
+  } else {
+    countdownParagraph.textContent = "Czas minął!";
+    clearInterval(intervalId);
+
+    // Wyczyść czas z localStorage po zakończeniu odliczania
+    localStorage.removeItem("countdownTime");
+  }
+}
+
+// Sprawdź, czy istnieje zapisany czas w localStorage
+var storedTime = localStorage.getItem("countdownTime");
+if (storedTime) {
+  totalTimeInSeconds = parseInt(storedTime, 10);
+}
+
+// Uruchomienie funkcji co sekundę
+var intervalId = setInterval(updateCountdown, 1000);
