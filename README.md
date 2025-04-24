@@ -23,7 +23,7 @@ An online store with aquarium accessories, created as a student project. The app
 - SQL dump: `sklep_akwarystyczny.sql`
 
 ## SQL Queries
-1. `sklep_akwarystyczny.sql` – Contains structure and sample data for tables such as products, customers, orders, and messages.
+`sklep_akwarystyczny.sql` – Contains structure and sample data for tables such as products, customers, orders, and messages.
 
 ## Instructions
 1. Clone the repository or download the files
