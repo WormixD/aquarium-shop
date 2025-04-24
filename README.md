@@ -35,7 +35,7 @@ An online store with aquarium accessories, created as a student project. The app
 All product data and images used in this project are fictional and for educational purposes only.
 
 ## Author
-[Szymon Bloch – LinkedIn](https://www.linkedin.com/in/szymon-bloch/)
+[Szymon Bloch](https://www.linkedin.com/in/szymon-bloch/)
 
 ## Licence
 This project is licensed for educational and non-commercial use only.
