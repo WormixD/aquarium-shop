@@ -1,7 +1,7 @@
 # Aquarium-Shop
 
 ## Overview
-An online store with aquarium accessories, created as a student project. The application was built using HTML, CSS, JavaScript, and PHP. It offers basic e-commerce functionalities such as product browsing, shopping cart management, order placement, and a customer account panel.
+An online store with aquarium accessories, created as a student project. The application was built using HTML, CSS, JavaScript, and PHP. It offers basic e-commerce functionalities such as product browsing, order placement, and a customer account panel.
 
 ## Features
 - Browse aquarium products (e.g. fish, accessories)
